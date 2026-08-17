@@ -14,6 +14,9 @@ export const metadata: Metadata = {
     "Portfolio de Abraao Silva dos Reis, desenvolvedor front-end focado em React, Next.js e TypeScript.",
   authors: [{ name: "Abraao Silva dos Reis" }],
   creator: "Abraao Silva dos Reis",
+  icons: {
+    icon: "/favicon.ico",
+  },
   openGraph: {
     title: "Abraao Silva dos Reis",
     description: "Desenvolvedor Front-end",
