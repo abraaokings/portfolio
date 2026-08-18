@@ -36,16 +36,7 @@ export function TimelineEntry({
           id={detailsId}
           className="text-sm leading-relaxed font-normal text-ink"
         >
-          {href ? (
-            <ExternalLink
-              href={href}
-              className="hover:underline hover:underline-offset-3"
-            >
-              {title}
-            </ExternalLink>
-          ) : (
-            title
-          )}
+          {href ? <ExternalLink href={href}>{title}</ExternalLink> : title}
           {note ? (
             <span className="ml-1.5 inline-block text-xs leading-[inherit] text-subtle before:mr-[5px] before:content-['•']">
               {note}
