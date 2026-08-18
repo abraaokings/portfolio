@@ -153,11 +153,7 @@ export const skillGroups: Array<{ label: string; items: Skill[] }> = [
   },
   {
     label: "APIs &\nIntegração",
-    items: [
-      { initials: "AP", label: "REST APIs" },
-      ...skills.graphql,
-      { initials: "OV", label: "Orval" },
-    ],
+    items: [{ initials: "AP", label: "REST APIs" }, ...skills.graphql],
   },
   {
     label: "Controle de Versão",

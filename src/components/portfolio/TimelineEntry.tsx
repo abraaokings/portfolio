@@ -42,7 +42,7 @@ export function TimelineEntry({
               {title}
             </ExternalLink>
           ) : (
-            <span className={titleClassName}>{title}</span>
+            <span>{title}</span>
           )}
           {note ? (
             <span className="ml-1.5 inline-block text-xs leading-[inherit] text-subtle before:mr-[5px] before:content-['•']">
