@@ -12,7 +12,6 @@
   --badge-bottom: #a1a1aa;
   --badge-foreground: #18181b;
   --badge-shadow: rgb(255 255 255 / 0.7);
-  --country-foreground-hover: #111111;
 }
 
 @theme {
@@ -39,7 +38,6 @@
     --badge-bottom: #18181b;
     --badge-foreground: #fafafa;
     --badge-shadow: rgb(255 255 255 / 0.08);
-    --country-foreground-hover: #111111;
   }
 }
 
@@ -55,7 +53,6 @@
   --badge-bottom: #a1a1aa;
   --badge-foreground: #18181b;
   --badge-shadow: rgb(255 255 255 / 0.7);
-  --country-foreground-hover: #111111;
 }
 
 :root[data-theme="dark"] {
@@ -70,7 +67,6 @@
   --badge-bottom: #18181b;
   --badge-foreground: #fafafa;
   --badge-shadow: rgb(255 255 255 / 0.08);
-  --country-foreground-hover: #111111;
 }
 
 * {
@@ -182,7 +178,7 @@ a {
 }
 
 .country-badge:hover {
-  color: var(--country-foreground-hover);
+  color: var(--muted);
 }
 
 .country-badge:hover::before {
