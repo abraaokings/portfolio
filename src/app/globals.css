@@ -29,8 +29,8 @@
   :root {
     --background: #000000;
     --foreground: #ededed;
-    --muted: #a1a1aa;
-    --subtle: #71717a;
+    --muted: #d4d4d8;
+    --subtle: #a1a1aa;
     --border: #27272a;
     --wash: #111111;
     --inverted: #000000;
@@ -58,8 +58,8 @@
 :root[data-theme="dark"] {
   --background: #000000;
   --foreground: #ededed;
-  --muted: #a1a1aa;
-  --subtle: #71717a;
+  --muted: #d4d4d8;
+  --subtle: #a1a1aa;
   --border: #27272a;
   --wash: #111111;
   --inverted: #000000;
