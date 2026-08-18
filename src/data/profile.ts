@@ -205,8 +205,6 @@ const nextInstitutional = [
   ...skills.lefthook,
 ];
 
-const wordpressWithTailwind = [...skills.wordpress, ...skills.tailwind];
-
 export const projects: TimelineItem[] = [
   {
     period: "2026",
@@ -266,21 +264,21 @@ export const projects: TimelineItem[] = [
     title: "Indoor Channel",
     href: "https://indoorchannel.com.br/",
     kind: "Site institucional",
-    skills: wordpressWithTailwind,
+    skills: skills.wordpress,
   },
   {
     period: "2024 — 2025",
     title: "Kirash",
     href: "https://kirash.com.br/",
     kind: "Site institucional",
-    skills: wordpressWithTailwind,
+    skills: skills.wordpress,
   },
   {
     period: "2024 — 2025",
     title: "Estranho Audio Parts",
     href: "https://estranhoaudioparts.com.br/",
     kind: "Site institucional",
-    skills: wordpressWithTailwind,
+    skills: skills.wordpress,
   },
 ];
 
