@@ -26,7 +26,7 @@ export const profile = {
 
 export const contacts = [
   {
-    label: "Email",
+    label: "E-mail",
     value: "abraao.reis.reis@gmail.com",
     href: "https://mail.google.com/mail/?view=cm&fs=1&to=abraao.reis.reis@gmail.com",
     ariaLabel:
