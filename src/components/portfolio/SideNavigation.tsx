@@ -13,7 +13,7 @@ export function SideNavigation() {
   return (
     <nav
       aria-label="Navegação por seções"
-      className="fixed top-1/2 left-[calc(50%+340px)] hidden -translate-y-1/2 xl:block"
+      className="fixed top-[72px] left-[calc(50%+340px)] hidden xl:block"
     >
       <ol className="relative flex flex-col gap-4 before:absolute before:top-2 before:bottom-2 before:left-[3px] before:w-px before:bg-line">
         {navigationItems.map((item) => (
