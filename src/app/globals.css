@@ -6,6 +6,12 @@
   --muted: #555555;
   --subtle: #999999;
   --border: #e5e5e5;
+  --wash: #f6f6f6;
+  --inverted: #ffffff;
+  --badge-top: #2c2c2c;
+  --badge-bottom: #111111;
+  --badge-foreground: #ffffff;
+  --country-foreground-hover: #111111;
 }
 
 @theme {
@@ -15,7 +21,52 @@
   --color-muted: var(--muted);
   --color-subtle: var(--subtle);
   --color-line: var(--border);
-  --color-wash: #f6f6f6;
+  --color-wash: var(--wash);
+  --color-inverted: var(--inverted);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #000000;
+    --foreground: #ededed;
+    --muted: #a1a1aa;
+    --subtle: #71717a;
+    --border: #27272a;
+    --wash: #111111;
+    --inverted: #000000;
+    --badge-top: #3f3f46;
+    --badge-bottom: #18181b;
+    --badge-foreground: #fafafa;
+    --country-foreground-hover: #111111;
+  }
+}
+
+:root[data-theme="light"] {
+  --background: #ffffff;
+  --foreground: #111111;
+  --muted: #555555;
+  --subtle: #999999;
+  --border: #e5e5e5;
+  --wash: #f6f6f6;
+  --inverted: #ffffff;
+  --badge-top: #2c2c2c;
+  --badge-bottom: #111111;
+  --badge-foreground: #ffffff;
+  --country-foreground-hover: #111111;
+}
+
+:root[data-theme="dark"] {
+  --background: #000000;
+  --foreground: #ededed;
+  --muted: #a1a1aa;
+  --subtle: #71717a;
+  --border: #27272a;
+  --wash: #111111;
+  --inverted: #000000;
+  --badge-top: #3f3f46;
+  --badge-bottom: #18181b;
+  --badge-foreground: #fafafa;
+  --country-foreground-hover: #111111;
 }
 
 * {
@@ -32,6 +83,7 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
+  background: var(--background);
 }
 
 a {
@@ -51,7 +103,7 @@ a:hover {
 
 .skip-link {
   background: var(--foreground);
-  color: #ffffff;
+  color: var(--inverted);
   left: 16px;
   padding: 10px 12px;
   position: fixed;
@@ -78,11 +130,11 @@ a:hover {
 
 ::selection {
   background: var(--foreground);
-  color: #ffffff;
+  color: var(--inverted);
 }
 
 .country-badge {
-  background: #f6f6f6;
+  background: var(--wash);
   color: var(--muted);
   overflow: hidden;
   position: relative;
@@ -122,7 +174,7 @@ a:hover {
 }
 
 .country-badge:hover {
-  color: #111111;
+  color: var(--country-foreground-hover);
 }
 
 .country-badge:hover::before {

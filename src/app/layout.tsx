@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Golos_Text } from "next/font/google";
 import "./globals.css";
 
@@ -23,6 +23,10 @@ export const metadata: Metadata = {
     locale: "pt_BR",
     type: "profile",
   },
+};
+
+export const viewport: Viewport = {
+  colorScheme: "light dark",
 };
 
 export default function RootLayout({
