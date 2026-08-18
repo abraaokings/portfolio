@@ -55,7 +55,7 @@ export const contacts = [
 export const experiences: TimelineItem[] = [
   {
     period: "nov 2025 — Agora",
-    title: "Desenvolvedor front-end",
+    title: "Desenvolvedor Front-end",
     href: "https://www.globalsys.com.br/",
     description: [
       "Globalsys · Cooperado",
