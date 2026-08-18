@@ -7,7 +7,7 @@ export function SkillBadge({ initials, label }: Skill) {
       aria-label={label}
     >
       <span
-        className="inline-flex size-4 items-center justify-center rounded-[3px] bg-[linear-gradient(180deg,var(--badge-top)_0%,var(--badge-bottom)_100%)] text-[7px] leading-none font-normal text-[var(--badge-foreground)] shadow-[inset_0_1px_0_rgb(255_255_255_/_0.08)]"
+        className="inline-flex size-4 items-center justify-center rounded-[3px] bg-[linear-gradient(180deg,var(--badge-top)_0%,var(--badge-bottom)_100%)] text-[7px] leading-none font-normal text-[var(--badge-foreground)] shadow-[inset_0_1px_0_var(--badge-shadow)]"
         aria-hidden="true"
       >
         {initials}

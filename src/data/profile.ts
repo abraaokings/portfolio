@@ -92,6 +92,7 @@ export const skills = {
   next: [{ initials: "NX", label: "Next.js" }],
   react: [{ initials: "RE", label: "React" }],
   reactFlow: [{ initials: "RF", label: "React Flow" }],
+  tailwind: [{ initials: "TW", label: "Tailwind CSS" }],
   wordpress: [
     { initials: "WP", label: "WordPress" },
     { initials: "EL", label: "Elementor" },
@@ -126,7 +127,7 @@ export const skillGroups: Array<{ label: string; items: Skill[] }> = [
   {
     label: "Bibliotecas de UI",
     items: [
-      { initials: "TW", label: "Tailwind CSS" },
+      ...skills.tailwind,
       { initials: "CK", label: "Chakra UI" },
       ...skills.antd,
       { initials: "AF", label: "AntD Form" },
@@ -197,11 +198,14 @@ const nextBackoffice = [
 
 const nextInstitutional = [
   ...skills.next,
+  ...skills.tailwind,
   ...skills.tanstack,
   ...skills.graphql,
   ...skills.strapi,
   ...skills.lefthook,
 ];
+
+const wordpressWithTailwind = [...skills.wordpress, ...skills.tailwind];
 
 export const projects: TimelineItem[] = [
   {
@@ -255,28 +259,28 @@ export const projects: TimelineItem[] = [
     title: "Senha Livre",
     href: "https://senhalivre.com/",
     kind: "Site institucional",
-    skills: [...skills.react, ...skills.reactFlow],
+    skills: [...skills.react, ...skills.reactFlow, ...skills.tailwind],
   },
   {
     period: "2024 — 2025",
     title: "Indoor Channel",
     href: "https://indoorchannel.com.br/",
     kind: "Site institucional",
-    skills: skills.wordpress,
+    skills: wordpressWithTailwind,
   },
   {
     period: "2024 — 2025",
     title: "Kirash",
     href: "https://kirash.com.br/",
     kind: "Site institucional",
-    skills: skills.wordpress,
+    skills: wordpressWithTailwind,
   },
   {
     period: "2024 — 2025",
     title: "Estranho Audio Parts",
     href: "https://estranhoaudioparts.com.br/",
     kind: "Site institucional",
-    skills: skills.wordpress,
+    skills: wordpressWithTailwind,
   },
 ];
 
