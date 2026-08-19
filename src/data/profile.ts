@@ -347,6 +347,15 @@ export const education: TimelineItem[] = [
 
 export const certificates: TimelineItem[] = [
   {
+    period: "2026",
+    title: "Proteção de Dados e Direitos Digitais",
+    href: "https://drive.google.com/file/d/18mZLvY-sGmZ3gKZREkbejFFHDpHoktlG/view?usp=sharing",
+    description: [
+      "Instituto Federal de Educação, Ciência e Tecnologia do Ceará · Campus Tianguá",
+      "Tianguá, Ceará, Brasil · 4 horas",
+    ],
+  },
+  {
     period: "2025",
     title: "JavaScript (básico)",
     href: "https://drive.google.com/file/d/1CnfdfVfUx3ppSbz7zR6X_QY4fNTea886/view?usp=sharing",
@@ -362,6 +371,15 @@ export const certificates: TimelineItem[] = [
     description: [
       "Instituto Federal de Educação, Ciência e Tecnologia do Ceará · Campus Tianguá",
       "Tianguá, Ceará, Brasil · 4 horas",
+    ],
+  },
+  {
+    period: "2022",
+    title: "II Reage, Mulher",
+    href: "https://drive.google.com/file/d/1EobLaa5v70LcREQI9_5fv5uOrtY4N_00/view?usp=sharing",
+    description: [
+      "Instituto Federal de Educação, Ciência e Tecnologia do Ceará · Campus Tianguá",
+      "Tianguá, Ceará, Brasil · 2 horas",
     ],
   },
   {
