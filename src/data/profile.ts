@@ -1,6 +1,8 @@
 export type Skill = {
   label: string;
   initials: string;
+  color: string;
+  foreground?: string;
 };
 
 export type TimelineItem = {
@@ -84,33 +86,57 @@ export const experiences: TimelineItem[] = [
 
 export const skills = {
   languages: [
-    { initials: "TS", label: "TypeScript" },
-    { initials: "JS", label: "JavaScript" },
-    { initials: "HT", label: "HTML5" },
-    { initials: "CS", label: "CSS3" },
+    { initials: "TS", label: "TypeScript", color: "#3178C6" },
+    {
+      initials: "JS",
+      label: "JavaScript",
+      color: "#F7DF1E",
+      foreground: "#111111",
+    },
+    { initials: "HT", label: "HTML5", color: "#E34F26" },
+    { initials: "CS", label: "CSS3", color: "#1572B6" },
   ],
-  next: [{ initials: "NX", label: "Next.js" }],
-  react: [{ initials: "RE", label: "React" }],
-  reactFlow: [{ initials: "RF", label: "React Flow" }],
-  tailwind: [{ initials: "TW", label: "Tailwind CSS" }],
+  next: [{ initials: "NX", label: "Next.js", color: "#666666" }],
+  react: [
+    {
+      initials: "RE",
+      label: "React",
+      color: "#61DAFB",
+      foreground: "#111111",
+    },
+  ],
+  reactFlow: [{ initials: "RF", label: "React Flow", color: "#FF0072" }],
+  tailwind: [
+    {
+      initials: "TW",
+      label: "Tailwind CSS",
+      color: "#06B6D4",
+      foreground: "#111111",
+    },
+  ],
   wordpress: [
-    { initials: "WP", label: "WordPress" },
-    { initials: "EL", label: "Elementor" },
-    { initials: "HT", label: "HTML5" },
-    { initials: "CS", label: "CSS3" },
-    { initials: "JS", label: "JavaScript" },
+    { initials: "WP", label: "WordPress", color: "#21759B" },
+    { initials: "EL", label: "Elementor", color: "#92003B" },
+    { initials: "HT", label: "HTML5", color: "#E34F26" },
+    { initials: "CS", label: "CSS3", color: "#1572B6" },
+    {
+      initials: "JS",
+      label: "JavaScript",
+      color: "#F7DF1E",
+      foreground: "#111111",
+    },
   ],
-  tanstack: [{ initials: "TQ", label: "TanStack Query" }],
-  zustand: [{ initials: "ZS", label: "Zustand" }],
-  zod: [{ initials: "ZD", label: "Zod" }],
-  antd: [{ initials: "AD", label: "Ant Design" }],
+  tanstack: [{ initials: "TQ", label: "TanStack Query", color: "#FF4154" }],
+  zustand: [{ initials: "ZS", label: "Zustand", color: "#443E38" }],
+  zod: [{ initials: "ZD", label: "Zod", color: "#3E67B1" }],
+  antd: [{ initials: "AD", label: "Ant Design", color: "#1677FF" }],
   graphql: [
-    { initials: "GQ", label: "GraphQL" },
-    { initials: "AP", label: "Apollo Client" },
-    { initials: "CG", label: "GraphQL Codegen" },
+    { initials: "GQ", label: "GraphQL", color: "#E10098" },
+    { initials: "AP", label: "Apollo Client", color: "#311C87" },
+    { initials: "CG", label: "GraphQL Codegen", color: "#1F56C5" },
   ],
-  strapi: [{ initials: "ST", label: "Strapi" }],
-  lefthook: [{ initials: "LH", label: "Lefthook" }],
+  strapi: [{ initials: "ST", label: "Strapi", color: "#4945FF" }],
+  lefthook: [{ initials: "LH", label: "Lefthook", color: "#FF1E56" }],
 } satisfies Record<string, Skill[]>;
 
 export const skillGroups: Array<{ label: string; items: Skill[] }> = [
@@ -128,58 +154,77 @@ export const skillGroups: Array<{ label: string; items: Skill[] }> = [
     label: "Bibliotecas de UI",
     items: [
       ...skills.tailwind,
-      { initials: "CK", label: "Chakra UI" },
+      { initials: "CK", label: "Chakra UI", color: "#319795" },
       ...skills.antd,
-      { initials: "AF", label: "AntD Form" },
-      { initials: "UI", label: "shadcn/ui" },
+      { initials: "AF", label: "AntD Form", color: "#1677FF" },
+      { initials: "UI", label: "shadcn/ui", color: "#71717A" },
     ],
   },
   { label: "CMS &\nNo-code", items: skills.wordpress.slice(0, 2) },
   {
     label: "Build Tools",
-    items: [{ initials: "VT", label: "Vite" }],
+    items: [
+      {
+        initials: "VT",
+        label: "Vite",
+        color: "#646CFF",
+      },
+    ],
   },
   {
     label: "Estado &\nFormulários",
     items: [
       ...skills.tanstack,
       ...skills.zustand,
-      { initials: "HF", label: "React Hook Form" },
+      { initials: "HF", label: "React Hook Form", color: "#EC5990" },
     ],
   },
   {
     label: "Validação",
-    items: [{ initials: "YP", label: "Yup" }, ...skills.zod],
+    items: [{ initials: "YP", label: "Yup", color: "#2563EB" }, ...skills.zod],
   },
   {
     label: "APIs &\nIntegração",
-    items: [{ initials: "AP", label: "REST APIs" }, ...skills.graphql],
+    items: [
+      { initials: "AP", label: "REST APIs", color: "#009688" },
+      ...skills.graphql,
+    ],
   },
   {
     label: "Controle de Versão",
     items: [
-      { initials: "GT", label: "Git" },
-      { initials: "GH", label: "GitHub" },
+      { initials: "GT", label: "Git", color: "#F05032" },
+      { initials: "GH", label: "GitHub", color: "#6E5494" },
       ...skills.lefthook,
     ],
   },
   {
     label: "Ambiente &\nEditor",
     items: [
-      { initials: "VS", label: "VS Code" },
-      { initials: "LX", label: "Linux" },
+      { initials: "VS", label: "VS Code", color: "#007ACC" },
+      {
+        initials: "LX",
+        label: "Linux",
+        color: "#FCC624",
+        foreground: "#111111",
+      },
     ],
   },
   {
     label: "Gerenciadores de Pacotes",
     items: [
-      { initials: "PN", label: "PNPM" },
-      { initials: "NP", label: "NPM" },
+      {
+        initials: "PN",
+        label: "PNPM",
+        color: "#F69220",
+        foreground: "#111111",
+      },
+      { initials: "NP", label: "NPM", color: "#CB3837" },
     ],
   },
   {
     label: "Deploy",
-    items: [{ initials: "VC", label: "Vercel" }],
+    items: [{ initials: "VC", label: "Vercel", color: "#666666" }],
   },
 ];
 
@@ -252,7 +297,9 @@ export const projects: TimelineItem[] = [
     period: "2024 — 2025",
     title: "Senha Livre",
     href: "https://senhalivre.com/",
-    kind: "Site institucional",
+    kind: "Backoffice",
+    kindDescription:
+      "Painel interno para equipes gerenciarem dados, processos e operações.",
     skills: [...skills.react, ...skills.reactFlow, ...skills.tailwind],
   },
   {
@@ -293,6 +340,7 @@ export const education: TimelineItem[] = [
     title:
       "IFTO - Instituto Federal de Educação, Ciência e Tecnologia do Tocantins",
     href: "https://www.ifto.edu.br/colinas",
+    note: "Incompleto",
     description: ["Licenciatura em Computação"],
   },
 ];
