@@ -347,7 +347,43 @@ export const education: TimelineItem[] = [
 
 export const certificates: TimelineItem[] = [
   {
+    period: "2025",
+    title: "JavaScript (básico)",
+    href: "https://drive.google.com/file/d/1CnfdfVfUx3ppSbz7zR6X_QY4fNTea886/view?usp=sharing",
+    description: [
+      "Instituto Federal de Educação, Ciência e Tecnologia de Minas Gerais",
+      "Belo Horizonte, Minas Gerais, Brasil · 40 horas",
+    ],
+  },
+  {
+    period: "2022",
+    title: "Oficina de Chatbot",
+    href: "https://drive.google.com/file/d/1cB-41fdslchpeAVBaJNUIFMS1qcDIZ_0/view?usp=sharing",
+    description: [
+      "Instituto Federal de Educação, Ciência e Tecnologia do Ceará · Campus Tianguá",
+      "Tianguá, Ceará, Brasil · 4 horas",
+    ],
+  },
+  {
+    period: "2022",
+    title: "Desafio de Pensamento Computacional",
+    href: "https://drive.google.com/file/d/1McfzgR_4S7NrkPWV42oHjfm7VqA5AzIo/view?usp=sharing",
+    description: [
+      "Instituto Federal de Educação, Ciência e Tecnologia do Ceará · Campus Tianguá",
+      "Tianguá, Ceará, Brasil · 4 horas",
+    ],
+  },
+  {
+    period: "2022",
+    title: "Introdução ao Arduino usando o simulador Tinkercad",
+    href: "https://drive.google.com/file/d/18a7Kt3VuLcnKphuKWc6rW53wlJ9MU8wJ/view?usp=sharing",
+    description: [
+      "Instituto Federal de Educação, Ciência e Tecnologia do Ceará · Campus Tianguá",
+      "Tianguá, Ceará, Brasil · 3 horas",
+    ],
+  },
+  {
     period: "Em breve",
-    title: "Estou procurando e digitalizando os certificados. Aguarde ;)",
+    title: "Mais certificados serão localizados e carregados em breve ;)",
   },
 ];
