@@ -2,6 +2,14 @@ import { ExternalLink } from "@/components/ui/ExternalLink";
 import { InfoIcon } from "@/components/ui/InfoIcon";
 import { SkillList } from "@/components/portfolio/SkillList";
 import type { TimelineItem } from "@/data/profile";
+import { slugify } from "@/utils/slugify";
+import {
+  inkTextClassName,
+  mutedTextClassName,
+  subtleTextClassName,
+  timelineGridClassName,
+} from "@/utils/styles";
+import { cn } from "@/utils/cn";
 
 export function TimelineEntry({
   period,
@@ -14,29 +22,21 @@ export function TimelineEntry({
   skills,
 }: TimelineItem) {
   const titleClassName = "underline underline-offset-3";
-  const detailsId = `${title}-${period}`
-    .toLowerCase()
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/(^-|-$)/g, "");
+  const detailsId = slugify(`${title}-${period}`);
 
   return (
     <li
-      className="grid grid-cols-[120px_minmax(0,1fr)] gap-x-9 pt-9 max-[640px]:gap-x-6 max-[520px]:grid-cols-1 max-[520px]:gap-y-1 max-[520px]:pt-7"
+      className={cn(
+        timelineGridClassName,
+        "pt-9 max-[520px]:gap-y-1 max-[520px]:pt-7",
+      )}
       aria-labelledby={detailsId}
     >
-      <p
-        className="text-sm leading-relaxed text-subtle"
-        aria-label={`Período: ${period}`}
-      >
+      <p className={subtleTextClassName} aria-label={`Período: ${period}`}>
         {period}
       </p>
       <div className="min-w-0 pb-3">
-        <h3
-          id={detailsId}
-          className="text-sm leading-relaxed font-normal text-ink"
-        >
+        <h3 id={detailsId} className={inkTextClassName}>
           {href ? (
             <ExternalLink href={href} className={titleClassName}>
               {title}
@@ -52,7 +52,7 @@ export function TimelineEntry({
         </h3>
 
         {description?.map((line) => (
-          <p key={line} className="pb-2 text-sm leading-relaxed text-muted">
+          <p key={line} className={cn(mutedTextClassName, "pb-2")}>
             {line}
           </p>
         ))}
@@ -72,9 +72,7 @@ export function TimelineEntry({
               <InfoIcon />
             </p>
           ) : (
-            <p className="inline-block text-sm leading-relaxed text-muted">
-              {kind}
-            </p>
+            <p className={cn(mutedTextClassName, "inline-block")}>{kind}</p>
           )
         ) : null}
 
