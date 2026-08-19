@@ -20,11 +20,11 @@ export function SideNavigation() {
           <li key={item.href} className="relative">
             <a
               href={item.href}
-              className="group flex items-center gap-3 text-xs leading-none text-subtle transition-colors hover:text-ink"
+              className="group flex items-center gap-3 text-xs leading-none text-subtle transition-colors hover:text-ink focus-visible:text-ink"
             >
               <span
                 aria-hidden="true"
-                className="relative z-10 size-[7px] rounded-[2px] bg-line transition-colors group-hover:bg-ink"
+                className="relative z-10 size-[7px] rounded-[2px] bg-line transition-colors group-hover:bg-ink group-focus-visible:bg-ink"
               />
               <span>{item.label}</span>
             </a>

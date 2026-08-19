@@ -1,11 +1,15 @@
 type ExternalLinkIconProps = {
   className?: string;
+  ariaHidden?: boolean;
 };
 
-export function ExternalLinkIcon({ className }: ExternalLinkIconProps) {
+export function ExternalLinkIcon({
+  className,
+  ariaHidden = true,
+}: ExternalLinkIconProps) {
   return (
     <svg
-      aria-hidden="true"
+      aria-hidden={ariaHidden}
       className={className}
       fill="none"
       focusable="false"

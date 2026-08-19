@@ -23,7 +23,10 @@ export function ContactSection() {
             >
               <strong className="font-normal">
                 {contact.value}
-                <ExternalLinkIcon className="relative top-[-0.45em] ml-[5px] inline-block size-[7px]" />
+                <ExternalLinkIcon
+                  ariaHidden
+                  className="relative top-[-0.45em] ml-[5px] inline-block size-[7px]"
+                />
               </strong>
             </ExternalLink>
           </li>

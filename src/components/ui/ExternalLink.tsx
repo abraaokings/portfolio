@@ -17,6 +17,11 @@ export function ExternalLink({
   showExternalIcon = true,
 }: ExternalLinkProps) {
   const isExternal = href.startsWith("http");
+  const accessibleLabel =
+    ariaLabel ??
+    (isExternal && typeof children === "string"
+      ? `${children} (abre em uma nova aba)`
+      : undefined);
 
   return (
     <Link
@@ -24,7 +29,7 @@ export function ExternalLink({
       target={isExternal ? "_blank" : undefined}
       rel={isExternal ? "noreferrer" : undefined}
       className={className}
-      aria-label={ariaLabel}
+      aria-label={accessibleLabel}
     >
       {children}
       {isExternal && showExternalIcon ? (

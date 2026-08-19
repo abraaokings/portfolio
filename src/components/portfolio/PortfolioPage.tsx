@@ -8,7 +8,7 @@ import { certificates, education, experiences, projects } from "@/data/profile";
 
 export function PortfolioPage() {
   return (
-    <main aria-label="Curriculo de perfil" id="content">
+    <main aria-label="Currículo de perfil" id="content">
       <a href="#profile-title" className="skip-link">
         Pular para o conteúdo
       </a>
