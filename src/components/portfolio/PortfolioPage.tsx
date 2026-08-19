@@ -39,8 +39,10 @@ export function PortfolioPage() {
           <TimelineSection
             title="Certificados"
             titleId="certificates-title"
+            titleNote="A maior parte dos certificados adicionados foi usada para abater horas extracurriculares."
             items={certificates}
             compact
+            initialVisibleItems={3}
           />
         </div>
       </div>
