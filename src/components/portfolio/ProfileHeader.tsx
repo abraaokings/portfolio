@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { AudioButton } from "@/components/ui/AudioButton";
 import { ThemeToggle } from "@/components/ui/ThemeToggle";
 import { profile } from "@/data/profile";
 
@@ -18,9 +19,15 @@ export function ProfileHeader() {
         </span>
         <div className="min-w-0 flex-1">
           <div className="flex items-start gap-3">
-            <h1 className="min-w-0 flex-1 text-xl leading-[1.3] font-normal text-ink">
-              {profile.name}
-            </h1>
+            <div className="flex min-w-0 flex-1 items-center gap-2">
+              <h1 className="min-w-0 text-xl leading-[1.3] font-normal text-ink">
+                {profile.name}
+              </h1>
+              <AudioButton
+                src="/audio/audio.mp3"
+                label={`Reproduzir áudio de ${profile.name}`}
+              />
+            </div>
             <ThemeToggle />
           </div>
           <p className="text-sm leading-relaxed text-muted">{profile.role}</p>
